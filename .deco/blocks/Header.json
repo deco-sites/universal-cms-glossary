@@ -1,1 +1,37 @@
-{"__resolveType":"site/sections/Header.tsx","navigation":{"links":[],"buttons":[]}}
+{
+  "__resolveType": "site/sections/Header.tsx",
+  "navigation": {
+    "links": [
+      {
+        "label": "Store",
+        "url": "/en/hub"
+      },
+      {
+        "label": "Community",
+        "url": "/en/community"
+      },
+      {
+        "label": "Docs",
+        "url": "/docs/en/overview"
+      },
+      {
+        "label": "Pricing",
+        "url": "/en/pricing"
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Login",
+        "href": "https://admin.deco.cx/",
+        "outline": true
+      },
+      {
+        "href": "https://deco.new/",
+        "text": "Try for Free"
+      }
+    ]
+  },
+  "logo": {
+    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10833/465e0fec-ebdc-4877-b62e-667ad9f5cba9"
+  }
+}

@@ -1,3 +1,88 @@
 {
-  "__resolveType": "site/sections/Footer.tsx"
+  "__resolveType": "site/sections/Footer.tsx",
+  "menu": [
+    {
+      "submenu": [
+        {
+          "title": "Login",
+          "href": "https://admin.deco.cx/"
+        },
+        {
+          "title": "Pricing",
+          "href": "/en/pricing"
+        },
+        {
+          "title": "Contact us",
+          "href": "/en/contact-us"
+        }
+      ],
+      "title": "Platform",
+      "href": "/"
+    },
+    {
+      "submenu": [
+        {
+          "title": "Docs",
+          "href": "/docs/en"
+        },
+        {
+          "title": "Blog",
+          "href": "/en/blog"
+        },
+        {
+          "title": "Community",
+          "href": "/en/community"
+        }
+      ],
+      "title": "Resources",
+      "href": "/"
+    },
+    {
+      "submenu": [
+        {
+          "title": "AI Assistant",
+          "href": "/ai-assistant"
+        },
+        {
+          "title": "Frontend Platform",
+          "href": "https://www.deco.cx"
+        }
+      ],
+      "title": "Products",
+      "href": "/"
+    },
+    {
+      "submenu": [
+        {
+          "title": "Headless Commerce",
+          "href": "https://www.deco.cx/headless-commerce"
+        },
+        {
+          "title": "Master SEO",
+          "href": "https://www.deco.cx/seo-for-ecommerce"
+        },
+        {
+          "title": "Boost PageSpeed",
+          "href": "https://www.deco.cx/speed-up-your-site"
+        }
+      ],
+      "title": "Solutions",
+      "href": "#"
+    }
+  ],
+  "extraLinks": [
+    {
+      "label": "Terms of Use",
+      "href": "https://deco.cx/terms-of-use"
+    },
+    {
+      "label": "Privacy Policy",
+      "href": "https://deco.cx/privacy-policy"
+    }
+  ],
+  "social": {
+    "linkedinUrl": "https://www.linkedin.com/company/deco-cx/",
+    "gitUrl": "https://github.com/deco-cx",
+    "discordUrl": "https://deco.cx/discord"
+  }
 }

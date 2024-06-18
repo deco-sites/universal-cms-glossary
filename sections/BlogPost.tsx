@@ -1,4 +1,4 @@
-import { BlogPostPage, BlogPost } from "apps/blog/types.ts";
+import { BlogPost, BlogPostPage } from "apps/blog/types.ts";
 import Image from "apps/website/components/Image.tsx";
 
 interface Props {
@@ -6,6 +6,7 @@ interface Props {
    * @description The description of name.
    */
   page?: BlogPostPage | null;
+  posts?: BlogPost[] | null;
 }
 
 const PARAGRAPH_STYLES = "[&_p]:leading-[150%] [&_*]:mb-4";
@@ -17,9 +18,11 @@ const IMAGE_STYLES = "[&_img]:rounded-2xl [&_img]:w-full [&_img]:my-12";
 const BLOCKQUOTE_STYLES =
   "[&>blockquote]:my-6 [&>blockquote]:border-l-2 [&>blockquote]:border-black [&>blockquote]:text-xl [&>blockquote]:italic [&>blockquote]:pl-6";
 
-const CONTENT_STYLES = `max-w-3xl mx-auto ${PARAGRAPH_STYLES} ${HEADING_STYLES} ${CODE_BLOCK_STYLES} ${IMAGE_STYLES} ${BLOCKQUOTE_STYLES}`;
+const CONTENT_STYLES =
+  ` ${PARAGRAPH_STYLES} ${HEADING_STYLES} ${CODE_BLOCK_STYLES} ${IMAGE_STYLES} ${BLOCKQUOTE_STYLES}`;
 
-const DEFAULT_AVATAR = "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e"
+const DEFAULT_AVATAR =
+  "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/7286de42-e9c5-4fcb-ae8b-b992eea4b78e";
 
 const DEFAULT_PROPS: BlogPost = {
   title: "Blog title heading will go here",
@@ -111,7 +114,7 @@ function SocialIcons() {
   );
 }
 
-export default function BlogPost({ page }: Props) {
+export default function BlogPost({ page, posts }: Props) {
   const { title, authors, image, date, content } = page?.post || DEFAULT_PROPS;
 
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -120,71 +123,113 @@ export default function BlogPost({ page }: Props) {
     day: "numeric",
   });
 
+  let currentLetter = "";
+
+  function getFirstLetter(title: string) {
+    return title.charAt(0).toUpperCase();
+  }
+
   return (
-    <div className="w-full flex flex-col gap-20 container mx-auto px-4 md:px-0 py-12 lg:py-28">
-      <div className="w-full flex flex-col gap-12 max-w-3xl lg:mx-auto">
-        <h1 className="text-5xl font-bold">{title}</h1>
-        <div className="flex items-center gap-4">
-          <Image
-            className="object-cover w-14 h-14 rounded-full"
-            alt={authors[0]?.name}
-            src={authors[0]?.avatar || DEFAULT_AVATAR}
-            width={56}
-            height={56}
-          />
-          <div className="flex flex-col">
-            <p className="font-semibold text-base">
-              {authors.map((author) => author.name).join(", ")}
-            </p>
-            <p className="text-base">{formattedDate}</p>
-          </div>
-        </div>
+    <div class="flex gap-10 w-full container mx-auto px-4 md:px-0 py-12 lg:py-28">
+      <div class="flex-col hidden md:flex">
+        <span class="font-semibold">All glossary terms</span>
+        {posts?.map((post) => {
+          const title = post.title;
+          const letter = getFirstLetter(title);
+          if (letter !== currentLetter) {
+            currentLetter = letter;
+            return (
+              <div key={title} class="flex flex-col">
+                <div class="w-10 h-[1px] bg-gray-200 my-4"></div>
+                <a
+                  href={`/blog/${post.slug}`}
+                  class="overflow-hidden hover:font-semibold"
+                >
+                  {title}
+                </a>
+              </div>
+            );
+          } else {
+            return (
+              <a
+                key={title}
+                href={`/blog/${post.slug}`}
+                class="overflow-hidden hover:font-semibold"
+              >
+                {title}
+              </a>
+            );
+          }
+        })}
       </div>
-      <Image
-        className="w-full object-cover aspect-video max-h-[600px] rounded-2xl"
-        src={image || ""}
-      />
-      <div
-        class={CONTENT_STYLES}
-        dangerouslySetInnerHTML={{
-          __html: content,
-        }}
-      ></div>
-      <div class="flex flex-col gap-10 max-w-3xl w-full mx-auto">
-        <div class="space-y-4">
-          <p class="text-lg font-bold">Share this post</p>
-          <div class="flex flex-col gap-8 md:flex-row justify-between">
-            <SocialIcons />
-            <div class="flex gap-2 text-white text-xs">
-              <p class="flex items-center bg-zinc-700 py-2 px-4 rounded-full">
-                Tag #1
+      <div className="w-full flex flex-col gap-20 container mx-auto px-4 md:px-0 py-12 lg:py-28">
+        <div className="w-full flex flex-col gap-12">
+          <h1 className="text-5xl font-bold">{title}</h1>
+          <div className="flex items-center gap-4">
+            <Image
+              className="object-cover w-14 h-14 rounded-full"
+              alt={authors[0]?.name}
+              src={authors[0]?.avatar || DEFAULT_AVATAR}
+              width={56}
+              height={56}
+            />
+            <div className="flex flex-col">
+              <p className="font-semibold text-base">
+                {authors.map((author) => author.name).join(", ")}
               </p>
-              <p class="flex items-center bg-zinc-700 py-2 px-4 rounded-full">
-                Tag #2
-              </p>
-              <p class="flex items-center bg-zinc-700 py-2 px-4 rounded-full">
-                Tag #3
-              </p>
+              <p className="text-base">{formattedDate}</p>
             </div>
           </div>
         </div>
-        {/* divider zinc-300 */}
-        <div class="w-full h-px bg-zinc-300"></div>
-        <div className="flex items-center gap-4">
-          <Image
-            className="object-cover w-14 h-14 rounded-full"
-            alt={authors[0]?.name}
-            src={authors[0]?.avatar || ""}
-            width={56}
-            height={56}
-          />
-          <div className="flex flex-col">
-            <p className="font-semibold text-base">
-              {authors[0].name}
-            </p>
-            <p className="text-base">
-              {`${authors[0].jobTitle ?? "Job Title"}, ${authors[0].company || "Company"}`}
-            </p>
+        <Image
+          className="w-full object-cover aspect-video max-h-[600px] rounded-2xl"
+          src={image || ""}
+        />
+        <div
+          class={CONTENT_STYLES}
+          dangerouslySetInnerHTML={{
+            __html: content,
+          }}
+        >
+        </div>
+        <div class="flex flex-col gap-10  w-full ">
+          <div class="space-y-4">
+            <p class="text-lg font-bold">Share this post</p>
+            <div class="flex flex-col gap-8 md:flex-row justify-between">
+              <SocialIcons />
+              <div class="flex gap-2 text-white text-xs">
+                <p class="flex items-center bg-zinc-700 py-2 px-4 rounded-full">
+                  Tag #1
+                </p>
+                <p class="flex items-center bg-zinc-700 py-2 px-4 rounded-full">
+                  Tag #2
+                </p>
+                <p class="flex items-center bg-zinc-700 py-2 px-4 rounded-full">
+                  Tag #3
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* divider zinc-300 */}
+          <div class="w-full h-px bg-zinc-300"></div>
+          <div className="flex items-center gap-4">
+            <Image
+              className="object-cover w-14 h-14 rounded-full"
+              alt={authors[0]?.name}
+              src={authors[0]?.avatar || ""}
+              width={56}
+              height={56}
+            />
+            <div className="flex flex-col">
+              <p className="font-semibold text-base">
+                {authors[0].name}
+              </p>
+              <p className="text-base">
+                {`${authors[0].jobTitle ?? "Job Title"}, ${
+                  authors[0].company || "Company"
+                }`}
+              </p>
+            </div>
           </div>
         </div>
       </div>
