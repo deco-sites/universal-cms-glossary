@@ -66,6 +66,7 @@ export default function Haader({
   },
 }: Nav) {
   return (
+    <section class="lg:container rounded-full bg-white/5 backdrop-blur-xl fixed top-2 lg:top-6 z-50 w-[calc(100vw-16px)] lg:w-full left-1/2 transform -translate-x-1/2 shadow-[0px_4px_16px_0px_rgba(0,0,0,0.10)] px-10">
     <nav class="container mx-auto lg:px-0 px-4">
       <div class="flex gap-8 items-center justify-between py-4">
         <a href="/">
@@ -145,5 +146,6 @@ export default function Haader({
         </ul>
       </div>
     </nav>
+    </section>
   );
 }

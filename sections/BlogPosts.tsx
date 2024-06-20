@@ -108,14 +108,15 @@ export default function BlogPosts({
   ];
 
   return (
+    <section class="bg-black">
     <ContainerComponent>
-      <div>
+      <div class="bg-black">
         <div class="hidden md:flex justify-center mb-16 gap-2">
           {alphabet.map((letter) => {
             const isUsed = Array.from(usedFirstLetters).includes(letter);
             return (
               <a
-                class={`p-2 ${isUsed ? "font-bold" : "text-[#9499AD]"}`}
+                class={`p-2 ${isUsed ? "font-bold text-white hover:text-[#02F67C]" : "text-[#9499AD] cursor-default"}`}
                 href={isUsed ? `#${letter}` : undefined}
               >
                 {letter}
@@ -126,18 +127,18 @@ export default function BlogPosts({
 
         <div class="flex gap-10">
           <div class="flex-col hidden md:flex">
-            <span class="font-semibold">All glossary terms</span>
+            <span class="text-[#02F67C]">All glossary terms</span>
             {posts?.slice(from, to).map((post) => {
               const title = post.title;
-              const letter = getFirstLetter(title);
+              const letter = getFirstLetter(title.trim());
               if (letter !== currentLetter) {
                 currentLetter = letter;
                 return (
                   <div key={title} class="flex flex-col">
-                    <div class="w-10 h-[1px] bg-gray-200 my-4"></div>
+                    <div class="w-10 h-[1px] bg-white my-4"></div>
                     <a
                       href={`/blog/${post.slug}`}
-                      class=" overflow-hidden hover:font-semibold"
+                      class=" overflow-hidden  text-white hover:text-[#02F67C]"
                     >
                       {title}
                     </a>
@@ -148,7 +149,7 @@ export default function BlogPosts({
                   <a
                     key={title}
                     href={`/blog/${post.slug}`}
-                    class="overflow-hidden hover:font-semibold"
+                    class="overflow-hidden  text-white hover:text-[#02F67C]"
                   >
                     {title}
                   </a>
@@ -159,23 +160,23 @@ export default function BlogPosts({
           <div class="gap-8 grid grid-cols-1">
             {posts?.slice(from, to).map((post) => {
               const title = post.title;
-              const letter = getFirstLetter(title);
+              const letter = getFirstLetter(title.trim());
               if (letter !== currentLetter) {
                 currentLetter = letter;
                 return (
                   <div key={title} class="max-w-[608px]">
-                    <div class="flex flex-col gap-2">
-                      <span id={currentLetter.toUpperCase()}>{letter}</span>
-                      <div class="w-full h-[1px] bg-gray-200"></div>
+                    <div class="flex flex-col gap-2 mb-6">
+                      <span id={currentLetter.toUpperCase()} class="text-[#02F67C]">{letter}</span>
+                      <div class="w-full h-[1px] bg-[#02F67C]"></div>
                     </div>
                     <a href={`/blog/${post.slug}`} class=" overflow-hidden">
-                      <div class="p-6 space-y-4 hover:bg-gray-100">
+                      <div class="p-6 space-y-4 bg-[#FFFFFF0D] border border-[#FFFFFF26] rounded-[20px]">
                         <div class="space-y-2">
-                          <h3 class="text-2xl font-bold">{title}</h3>
-                          <p class="text-base">{post.excerpt}</p>
+                          <h3 class="text-2xl font-bold text-white">{title}</h3>
+                          <p class="text-white">{post.excerpt}</p>
                         </div>
                         <div class="flex flex-wrap gap-2">
-                          <span>Read more</span>
+                          <span class="text-white">Read more</span>
                         </div>
                       </div>
                     </a>
@@ -186,15 +187,15 @@ export default function BlogPosts({
                   <a
                     key={title}
                     href={`/blog/${post.slug}`}
-                    class="overflow-hidden max-w-[608px] hover:bg-gray-100"
+                    class="overflow-hidden max-w-[608px] bg-[#FFFFFF0D] border border-[#FFFFFF26] rounded-[20px]"
                   >
                     <div class="p-6 space-y-4">
                       <div class="space-y-2">
-                        <h3 class="text-2xl font-bold">{title}</h3>
-                        <p class="text-base">{post.excerpt}</p>
+                        <h3 class="text-2xl font-bold text-white">{title}</h3>
+                        <p class="text-white">{post.excerpt}</p>
                       </div>
                       <div class="flex flex-wrap gap-2">
-                        <span>Read more</span>
+                        <span class="text-white">Read more</span>
                       </div>
                     </div>
                   </a>
@@ -205,5 +206,6 @@ export default function BlogPosts({
         </div>
       </div>
     </ContainerComponent>
+    </section>
   );
 }

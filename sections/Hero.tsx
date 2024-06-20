@@ -33,8 +33,8 @@ export default function HeroFlats({
   cta,
 }: Props) {
   return (
-    <div>
-      <div class="flex flex-col gap-8 items-center mx-auto">
+    <section class="bg-black">
+      <div class="flex flex-col gap-8 items-center mx-auto bg-black">
         <div
           class={`flex w-full xl:container xl:mx-auto py-20 mx-5 md:mx-10 z-10 ${
             image
@@ -61,13 +61,13 @@ export default function HeroFlats({
             }`}
           >
             <div
-              class="font-medium inline-block leading-[100%] lg:text-[80px] text-4xl tracking-[-2.4px]"
+              class="font-medium inline-block leading-[100%] lg:text-[80px] text-4xl tracking-[-2.4px] text-white"
               dangerouslySetInnerHTML={{
                 __html: title,
               }}
             >
             </div>
-            <p class="leading-[150%] md:text-md text-lg">
+            <p class="leading-[150%] md:text-md text-lg text-white">
               {description}
             </p>
             {cta && cta.length > 0 &&
@@ -91,6 +91,6 @@ export default function HeroFlats({
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
