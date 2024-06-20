@@ -66,7 +66,7 @@ export default function BlogPosts({
   });
 
   posts?.forEach((post) => {
-    const title = post.title;
+    const title = post?.title;
     const firstLetter = title.charAt(0).toUpperCase();
     if (/[A-Za-z]/.test(firstLetter)) {
       usedFirstLetters.add(firstLetter);
@@ -129,7 +129,7 @@ export default function BlogPosts({
           <div class="flex-col hidden md:flex">
             <span class="text-[#02F67C]">All glossary terms</span>
             {posts?.slice(from, to).map((post) => {
-              const title = post.title;
+              const title = post?.title;
               const letter = getFirstLetter(title.trim());
               if (letter !== currentLetter) {
                 currentLetter = letter;
@@ -137,7 +137,7 @@ export default function BlogPosts({
                   <div key={title} class="flex flex-col">
                     <div class="w-10 h-[1px] bg-white my-4"></div>
                     <a
-                      href={`/blog/${post.slug}`}
+                      href={`/blog/${post?.slug}`}
                       class=" overflow-hidden  text-white hover:text-[#02F67C]"
                     >
                       {title}
@@ -148,7 +148,7 @@ export default function BlogPosts({
                 return (
                   <a
                     key={title}
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post?.slug}`}
                     class="overflow-hidden  text-white hover:text-[#02F67C]"
                   >
                     {title}
@@ -159,7 +159,7 @@ export default function BlogPosts({
           </div>
           <div class="gap-8 grid grid-cols-1">
             {posts?.slice(from, to).map((post) => {
-              const title = post.title;
+              const title = post?.title;
               const letter = getFirstLetter(title.trim());
               if (letter !== currentLetter) {
                 currentLetter = letter;
@@ -169,11 +169,11 @@ export default function BlogPosts({
                       <span id={currentLetter.toUpperCase()} class="text-[#02F67C]">{letter}</span>
                       <div class="w-full h-[1px] bg-[#02F67C]"></div>
                     </div>
-                    <a href={`/blog/${post.slug}`} class=" overflow-hidden">
+                    <a href={`/blog/${post?.slug}`} class=" overflow-hidden">
                       <div class="p-6 space-y-4 bg-[#FFFFFF0D] border border-[#FFFFFF26] rounded-[20px]">
                         <div class="space-y-2">
                           <h3 class="text-2xl font-bold text-white">{title}</h3>
-                          <p class="text-white">{post.excerpt}</p>
+                          <p class="text-white">{post?.excerpt}</p>
                         </div>
                         <div class="flex flex-wrap gap-2">
                           <span class="text-white">Read more</span>
@@ -186,13 +186,13 @@ export default function BlogPosts({
                 return (
                   <a
                     key={title}
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post?.slug}`}
                     class="overflow-hidden max-w-[608px] bg-[#FFFFFF0D] border border-[#FFFFFF26] rounded-[20px]"
                   >
                     <div class="p-6 space-y-4">
                       <div class="space-y-2">
                         <h3 class="text-2xl font-bold text-white">{title}</h3>
-                        <p class="text-white">{post.excerpt}</p>
+                        <p class="text-white">{post?.excerpt}</p>
                       </div>
                       <div class="flex flex-wrap gap-2">
                         <span class="text-white">Read more</span>
