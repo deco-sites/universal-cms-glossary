@@ -25,7 +25,73 @@
       "name": "Pages",
       "pinned": true,
       "icon": "files",
-      "layout": [],
+      "layout": {
+        "settings": {
+          "hasHeaders": true,
+          "constrainDragToContainer": true,
+          "reorderEnabled": true,
+          "selectionEnabled": false,
+          "popoutWholeStack": false,
+          "blockedPopoutsThrowError": true,
+          "closePopoutsOnUnload": true,
+          "showPopoutIcon": false,
+          "showMaximiseIcon": false,
+          "showCloseIcon": false,
+          "responsiveMode": "onload"
+        },
+        "dimensions": {
+          "borderWidth": 8,
+          "minItemHeight": 10,
+          "minItemWidth": 10,
+          "headerHeight": 40,
+          "dragProxyWidth": 300,
+          "dragProxyHeight": 200
+        },
+        "labels": {
+          "close": "close",
+          "maximise": "maximise",
+          "minimise": "minimise",
+          "popout": "open in new window",
+          "popin": "pop in",
+          "tabDropdown": "additional tabs"
+        },
+        "content": [
+          {
+            "type": "row",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "content": [
+              {
+                "type": "stack",
+                "width": 100,
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "",
+                "activeItemIndex": 0,
+                "content": [
+                  {
+                    "id": "pages::List::list::List::%7B%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-pages::List::list::List::%7B%7D\" />",
+                    "type": "component",
+                    "componentName": "component",
+                    "componentState": {
+                      "id": "pages::List::list::List::%7B%7D"
+                    },
+                    "isClosable": true,
+                    "reorderEnabled": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "isClosable": true,
+        "reorderEnabled": true,
+        "title": "",
+        "openPopouts": [],
+        "maximisedItemId": null
+      },
       "tabs": {
         "pages::List::list::List::%7B%7D": {
           "name": "List",
@@ -182,7 +248,73 @@
       "name": "Releases",
       "pinned": true,
       "icon": "rocket",
-      "layout": [],
+      "layout": {
+        "settings": {
+          "hasHeaders": true,
+          "constrainDragToContainer": true,
+          "reorderEnabled": true,
+          "selectionEnabled": false,
+          "popoutWholeStack": false,
+          "blockedPopoutsThrowError": true,
+          "closePopoutsOnUnload": true,
+          "showPopoutIcon": false,
+          "showMaximiseIcon": false,
+          "showCloseIcon": false,
+          "responsiveMode": "onload"
+        },
+        "dimensions": {
+          "borderWidth": 8,
+          "minItemHeight": 10,
+          "minItemWidth": 10,
+          "headerHeight": 40,
+          "dragProxyWidth": 300,
+          "dragProxyHeight": 200
+        },
+        "labels": {
+          "close": "close",
+          "maximise": "maximise",
+          "minimise": "minimise",
+          "popout": "open in new window",
+          "popin": "pop in",
+          "tabDropdown": "additional tabs"
+        },
+        "content": [
+          {
+            "type": "row",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "content": [
+              {
+                "type": "stack",
+                "width": 100,
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "",
+                "activeItemIndex": 0,
+                "content": [
+                  {
+                    "id": "releases::releases::rocket::releases::%7B%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-releases::releases::rocket::releases::%7B%7D\" />",
+                    "type": "component",
+                    "componentName": "component",
+                    "componentState": {
+                      "id": "releases::releases::rocket::releases::%7B%7D"
+                    },
+                    "isClosable": true,
+                    "reorderEnabled": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "isClosable": true,
+        "reorderEnabled": true,
+        "title": "",
+        "openPopouts": [],
+        "maximisedItemId": null
+      },
       "tabs": {
         "releases::releases::rocket::releases::%7B%7D": {
           "name": "releases",
@@ -512,7 +644,7 @@
             "content": [
               {
                 "type": "stack",
-                "width": 30,
+                "width": 8.786259578946924,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -534,7 +666,7 @@
               },
               {
                 "type": "stack",
-                "width": 70,
+                "width": 30.926090372113798,
                 "isClosable": true,
                 "reorderEnabled": true,
                 "title": "",
@@ -549,6 +681,48 @@
                       "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Preview::world::Preview::%7B%7D"
                     },
                     "width": 70,
+                    "isClosable": true,
+                    "reorderEnabled": true
+                  }
+                ]
+              },
+              {
+                "type": "stack",
+                "width": 29.731764324871207,
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "",
+                "activeItemIndex": 0,
+                "content": [
+                  {
+                    "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2F.deco%2Fmetadata%2Fspaces.json%22%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2F.deco%2Fmetadata%2Fspaces.json%22%7D\" />",
+                    "type": "component",
+                    "componentName": "component",
+                    "componentState": {
+                      "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2F.deco%2Fmetadata%2Fspaces.json%22%7D"
+                    },
+                    "isClosable": true,
+                    "reorderEnabled": true
+                  }
+                ]
+              },
+              {
+                "type": "stack",
+                "width": 30.55588572406806,
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "",
+                "activeItemIndex": 0,
+                "content": [
+                  {
+                    "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2Fdeno.json%22%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2Fdeno.json%22%7D\" />",
+                    "type": "component",
+                    "componentName": "component",
+                    "componentState": {
+                      "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2Fdeno.json%22%7D"
+                    },
                     "isClosable": true,
                     "reorderEnabled": true
                   }
@@ -573,8 +747,7 @@
           "width": 30,
           "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Properties::list::Properties::%7B%7D",
           "state": {
-            "__signal": null,
-            "value": null
+            "__signal": null
           }
         },
         "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Preview::world::Preview::%7B%7D": {
@@ -585,6 +758,34 @@
           "viewId": "Preview",
           "width": 70,
           "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Preview::world::Preview::%7B%7D",
+          "state": {
+            "__signal": null
+          }
+        },
+        "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2F.deco%2Fmetadata%2Fspaces.json%22%7D": {
+          "name": "Code",
+          "icon": "code",
+          "accepts": "function",
+          "render": "function",
+          "viewId": "Code",
+          "viewProps": {
+            "spaceId": "/.deco/metadata/spaces.json"
+          },
+          "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2F.deco%2Fmetadata%2Fspaces.json%22%7D",
+          "state": {
+            "__signal": null
+          }
+        },
+        "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2Fdeno.json%22%7D": {
+          "name": "Code",
+          "icon": "code",
+          "accepts": "function",
+          "render": "function",
+          "viewId": "Code",
+          "viewProps": {
+            "spaceId": "/deno.json"
+          },
+          "id": "%2F.deco%2Fblocks%2Fpages-home-5afd25174424.json::Code::code::Code::%7B%22spaceId%22%3A%22%2Fdeno.json%22%7D",
           "state": {
             "__signal": null
           }
@@ -2035,6 +2236,213 @@
         "maximisedItemId": null
       },
       "tabs": {}
+    },
+    {
+      "id": "{\"oid\":\"1bd3d0ae1c6294fd778ee9775aa6937e2bedfa6a\",\"short\":\"1bd3d0a\",\"commit\":{\"message\":\"Release staging environment with 0 changes made by Vinicius Trindade\\n\",\"parent\":[\"c05c415b942a39026b0d8180447f27598d4dfc8e\"],\"tree\":\"31ae6a15554c5d62b4cb6dd3af75dfc3191b33a2\",\"author\":{\"name\":\"Vinicius Trindade\",\"email\":\"vinicius.ribeiro@deco.cx\",\"timestamp\":1718917261,\"timezoneOffset\":0},\"committer\":{\"name\":\"Vinicius Trindade\",\"email\":\"vinicius.ribeiro@deco.cx\",\"timestamp\":1718917261,\"timezoneOffset\":0}}}",
+      "name": "Release 1bd3d0a",
+      "pinned": false,
+      "icon": "rocket",
+      "layout": {
+        "settings": {
+          "hasHeaders": true,
+          "constrainDragToContainer": true,
+          "reorderEnabled": true,
+          "selectionEnabled": false,
+          "popoutWholeStack": false,
+          "blockedPopoutsThrowError": true,
+          "closePopoutsOnUnload": true,
+          "showPopoutIcon": false,
+          "showMaximiseIcon": false,
+          "showCloseIcon": false,
+          "responsiveMode": "onload"
+        },
+        "dimensions": {
+          "borderWidth": 8,
+          "minItemHeight": 10,
+          "minItemWidth": 10,
+          "headerHeight": 40,
+          "dragProxyWidth": 300,
+          "dragProxyHeight": 200
+        },
+        "labels": {
+          "close": "close",
+          "maximise": "maximise",
+          "minimise": "minimise",
+          "popout": "open in new window",
+          "popin": "pop in",
+          "tabDropdown": "additional tabs"
+        },
+        "content": [
+          {
+            "type": "row",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "content": [
+              {
+                "type": "stack",
+                "width": 100,
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "",
+                "activeItemIndex": 0,
+                "content": [
+                  {
+                    "id": "%7B%22oid%22%3A%221bd3d0ae1c6294fd778ee9775aa6937e2bedfa6a%22%2C%22short%22%3A%221bd3d0a%22%2C%22commit%22%3A%7B%22message%22%3A%22Release%20staging%20environment%20with%200%20changes%20made%20by%20Vinicius%20Trindade%5Cn%22%2C%22parent%22%3A%5B%22c05c415b942a39026b0d8180447f27598d4dfc8e%22%5D%2C%22tree%22%3A%2231ae6a15554c5d62b4cb6dd3af75dfc3191b33a2%22%2C%22author%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%2C%22committer%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%7D%7D::Release::rocket::Release::%7B%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-%7B%22oid%22%3A%221bd3d0ae1c6294fd778ee9775aa6937e2bedfa6a%22%2C%22short%22%3A%221bd3d0a%22%2C%22commit%22%3A%7B%22message%22%3A%22Release%20staging%20environment%20with%200%20changes%20made%20by%20Vinicius%20Trindade%5Cn%22%2C%22parent%22%3A%5B%22c05c415b942a39026b0d8180447f27598d4dfc8e%22%5D%2C%22tree%22%3A%2231ae6a15554c5d62b4cb6dd3af75dfc3191b33a2%22%2C%22author%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%2C%22committer%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%7D%7D::Release::rocket::Release::%7B%7D\" />",
+                    "type": "component",
+                    "componentName": "component",
+                    "componentState": {
+                      "id": "%7B%22oid%22%3A%221bd3d0ae1c6294fd778ee9775aa6937e2bedfa6a%22%2C%22short%22%3A%221bd3d0a%22%2C%22commit%22%3A%7B%22message%22%3A%22Release%20staging%20environment%20with%200%20changes%20made%20by%20Vinicius%20Trindade%5Cn%22%2C%22parent%22%3A%5B%22c05c415b942a39026b0d8180447f27598d4dfc8e%22%5D%2C%22tree%22%3A%2231ae6a15554c5d62b4cb6dd3af75dfc3191b33a2%22%2C%22author%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%2C%22committer%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%7D%7D::Release::rocket::Release::%7B%7D"
+                    },
+                    "isClosable": true,
+                    "reorderEnabled": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "isClosable": true,
+        "reorderEnabled": true,
+        "title": "",
+        "openPopouts": [],
+        "maximisedItemId": null
+      },
+      "tabs": {
+        "%7B%22oid%22%3A%221bd3d0ae1c6294fd778ee9775aa6937e2bedfa6a%22%2C%22short%22%3A%221bd3d0a%22%2C%22commit%22%3A%7B%22message%22%3A%22Release%20staging%20environment%20with%200%20changes%20made%20by%20Vinicius%20Trindade%5Cn%22%2C%22parent%22%3A%5B%22c05c415b942a39026b0d8180447f27598d4dfc8e%22%5D%2C%22tree%22%3A%2231ae6a15554c5d62b4cb6dd3af75dfc3191b33a2%22%2C%22author%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%2C%22committer%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%7D%7D::Release::rocket::Release::%7B%7D": {
+          "name": "Release",
+          "icon": "rocket",
+          "render": "function",
+          "viewId": "Release",
+          "id": "%7B%22oid%22%3A%221bd3d0ae1c6294fd778ee9775aa6937e2bedfa6a%22%2C%22short%22%3A%221bd3d0a%22%2C%22commit%22%3A%7B%22message%22%3A%22Release%20staging%20environment%20with%200%20changes%20made%20by%20Vinicius%20Trindade%5Cn%22%2C%22parent%22%3A%5B%22c05c415b942a39026b0d8180447f27598d4dfc8e%22%5D%2C%22tree%22%3A%2231ae6a15554c5d62b4cb6dd3af75dfc3191b33a2%22%2C%22author%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%2C%22committer%22%3A%7B%22name%22%3A%22Vinicius%20Trindade%22%2C%22email%22%3A%22vinicius.ribeiro%40deco.cx%22%2C%22timestamp%22%3A1718917261%2C%22timezoneOffset%22%3A0%7D%7D%7D::Release::rocket::Release::%7B%7D",
+          "state": {
+            "__signal": null
+          }
+        }
+      }
+    },
+    {
+      "id": "collections:collections/blog/posts/ee2afa6d80bc",
+      "name": "Blog / Posts / ee2afa6d80bc",
+      "pinned": false,
+      "icon": "article",
+      "layout": {
+        "settings": {
+          "hasHeaders": true,
+          "constrainDragToContainer": true,
+          "reorderEnabled": true,
+          "selectionEnabled": false,
+          "popoutWholeStack": false,
+          "blockedPopoutsThrowError": true,
+          "closePopoutsOnUnload": true,
+          "showPopoutIcon": false,
+          "showMaximiseIcon": false,
+          "showCloseIcon": false,
+          "responsiveMode": "onload"
+        },
+        "dimensions": {
+          "borderWidth": 8,
+          "minItemHeight": 10,
+          "minItemWidth": 10,
+          "headerHeight": 40,
+          "dragProxyWidth": 300,
+          "dragProxyHeight": 200
+        },
+        "labels": {
+          "close": "close",
+          "maximise": "maximise",
+          "minimise": "minimise",
+          "popout": "open in new window",
+          "popin": "pop in",
+          "tabDropdown": "additional tabs"
+        },
+        "content": [
+          {
+            "type": "row",
+            "isClosable": true,
+            "reorderEnabled": true,
+            "title": "",
+            "content": [
+              {
+                "type": "stack",
+                "width": 50,
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "",
+                "activeItemIndex": 0,
+                "content": [
+                  {
+                    "id": "collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20%2F%20Posts%20%2F%20ee2afa6d80bc::article::Edit%20Blog%20Item::%7B%22spaceId%22%3A%22%7B%5C%22path%5C%22%3A%5B%5C%22post%5C%22%5D%2C%5C%22filepath%5C%22%3A%5C%22%2F.deco%2Fblocks%2Fcollections%252Fblog%252Fposts%252Fee2afa6d80bc.json%5C%22%7D%22%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20%2F%20Posts%20%2F%20ee2afa6d80bc::article::Edit%20Blog%20Item::%7B%22spaceId%22%3A%22%7B%5C%22path%5C%22%3A%5B%5C%22post%5C%22%5D%2C%5C%22filepath%5C%22%3A%5C%22%2F.deco%2Fblocks%2Fcollections%252Fblog%252Fposts%252Fee2afa6d80bc.json%5C%22%7D%22%7D\" />",
+                    "type": "component",
+                    "componentName": "component",
+                    "componentState": {
+                      "id": "collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20%2F%20Posts%20%2F%20ee2afa6d80bc::article::Edit%20Blog%20Item::%7B%22spaceId%22%3A%22%7B%5C%22path%5C%22%3A%5B%5C%22post%5C%22%5D%2C%5C%22filepath%5C%22%3A%5C%22%2F.deco%2Fblocks%2Fcollections%252Fblog%252Fposts%252Fee2afa6d80bc.json%5C%22%7D%22%7D"
+                    },
+                    "isClosable": true,
+                    "reorderEnabled": true
+                  }
+                ]
+              },
+              {
+                "type": "stack",
+                "width": 50,
+                "isClosable": true,
+                "reorderEnabled": true,
+                "title": "",
+                "activeItemIndex": 0,
+                "content": [
+                  {
+                    "id": "collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20Preview::article::Blog%20Preview::%7B%22spaceId%22%3A%22%7B%5C%22blockId%5C%22%3A%5C%22collections%2Fblog%2Fposts%2Fee2afa6d80bc%5C%22%7D%22%7D",
+                    "title": "<div class=\"contents text-base-700\" id=\"header-collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20Preview::article::Blog%20Preview::%7B%22spaceId%22%3A%22%7B%5C%22blockId%5C%22%3A%5C%22collections%2Fblog%2Fposts%2Fee2afa6d80bc%5C%22%7D%22%7D\" />",
+                    "type": "component",
+                    "componentName": "component",
+                    "componentState": {
+                      "id": "collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20Preview::article::Blog%20Preview::%7B%22spaceId%22%3A%22%7B%5C%22blockId%5C%22%3A%5C%22collections%2Fblog%2Fposts%2Fee2afa6d80bc%5C%22%7D%22%7D"
+                    },
+                    "isClosable": true,
+                    "reorderEnabled": true
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "isClosable": true,
+        "reorderEnabled": true,
+        "title": "",
+        "openPopouts": [],
+        "maximisedItemId": null
+      },
+      "tabs": {
+        "collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20%2F%20Posts%20%2F%20ee2afa6d80bc::article::Edit%20Blog%20Item::%7B%22spaceId%22%3A%22%7B%5C%22path%5C%22%3A%5B%5C%22post%5C%22%5D%2C%5C%22filepath%5C%22%3A%5C%22%2F.deco%2Fblocks%2Fcollections%252Fblog%252Fposts%252Fee2afa6d80bc.json%5C%22%7D%22%7D": {
+          "name": "Blog / Posts / ee2afa6d80bc",
+          "icon": "article",
+          "render": "function",
+          "viewId": "Edit Blog Item",
+          "viewProps": {
+            "spaceId": "{\"path\":[\"post\"],\"filepath\":\"/.deco/blocks/collections%2Fblog%2Fposts%2Fee2afa6d80bc.json\"}"
+          },
+          "id": "collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20%2F%20Posts%20%2F%20ee2afa6d80bc::article::Edit%20Blog%20Item::%7B%22spaceId%22%3A%22%7B%5C%22path%5C%22%3A%5B%5C%22post%5C%22%5D%2C%5C%22filepath%5C%22%3A%5C%22%2F.deco%2Fblocks%2Fcollections%252Fblog%252Fposts%252Fee2afa6d80bc.json%5C%22%7D%22%7D",
+          "state": {
+            "__signal": null
+          }
+        },
+        "collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20Preview::article::Blog%20Preview::%7B%22spaceId%22%3A%22%7B%5C%22blockId%5C%22%3A%5C%22collections%2Fblog%2Fposts%2Fee2afa6d80bc%5C%22%7D%22%7D": {
+          "name": "Blog Preview",
+          "icon": "article",
+          "render": "function",
+          "viewId": "Blog Preview",
+          "viewProps": {
+            "spaceId": "{\"blockId\":\"collections/blog/posts/ee2afa6d80bc\"}"
+          },
+          "id": "collections%3Acollections%2Fblog%2Fposts%2Fee2afa6d80bc::Blog%20Preview::article::Blog%20Preview::%7B%22spaceId%22%3A%22%7B%5C%22blockId%5C%22%3A%5C%22collections%2Fblog%2Fposts%2Fee2afa6d80bc%5C%22%7D%22%7D",
+          "state": {
+            "__signal": null
+          }
+        }
+      }
     }
   ]
 }

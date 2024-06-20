@@ -146,5 +146,6 @@
   "/.deco/blocks/Preview%20site%2Fsections%2FHero.tsx.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Hero.tsx"
-  }
+  },
+  "/.deco/blocks/collections%2Fblog%2Fposts%2Fee2afa6d80bc.json": null
 }
